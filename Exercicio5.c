@@ -1,18 +1,27 @@
 #include <stdio.h>
 
-int main(){
+int main() {
 
-    int idadeAtual;
-    int idadeEm2025;
+  int idadeAtual, anoNascimento, idadeFutura, anoAtual, anoDesejado;
 
-    printf("Olá, digite sua idade atual para saber quantos anos terá em 2025: ");
-    scanf("%d", &idadeAtual);
+  printf("Olá, digite seu ano de nascimento para saber quantos anos terá em um ano qualquer: ");
+  scanf("%d", &anoNascimento);
 
-    // cálculo da idade
-    // o cálculo ficou extremamente simples. Poderia ser mais robusto, dependendo do mês e dia no qual a pessoa nasceu e sabendo o ano atual para ter resultados diferentes, porém ainda estou quebrando a cabeça pra deixar ele dessa forma.
+  printf("Agora digite o ano Atual: ");
+  scanf("%d", &anoAtual);
 
-    idadeEm2025 = idadeAtual + 2;
+  printf("Digite o ano no qual você deseja saber sua idade: ");
+  scanf("%d", &anoDesejado);
+    
+  // cálculo da idade o cálculo ficou extremamente simples. Poderia ser mais robusto, dependendo
+  // do mês e dia no qual a pessoa nasceu e sabendo o ano atual para ter
+  // resultados diferentes, porém ainda estou quebrando a cabeça pra deixar ele
+  // dessa forma.
 
-    printf("Você tem %d anos em 2023. Em 2025 você terá %d.", idadeAtual, idadeEm2025);
-    return 0;
+  idadeAtual = anoAtual - anoNascimento;
+  
+  idadeFutura = anoDesejado - anoNascimento;
+
+  printf("Você tem %d. Em %d você terá %d.", idadeAtual, anoDesejado, idadeFutura);
+  return 0;
 }
